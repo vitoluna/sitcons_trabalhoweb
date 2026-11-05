@@ -11,7 +11,6 @@ function irParaSeries() {
     }
 }
 
-
 function irParaContato() {
     if (document.getElementById("contato")) {
         const secao = document.getElementById("contato");
@@ -25,7 +24,6 @@ function irParaContato() {
         window.location.href = "index.html#contato";
     }
 }
-
 
 function enviarWhatsApp(event) {
     event.preventDefault();
@@ -45,7 +43,6 @@ function enviarWhatsApp(event) {
 }
 
 
-/* ===== Menu sanduíche (celular) ===== */
 document.addEventListener("DOMContentLoaded", function () {
     const botao = document.querySelector(".botao-menu");
     const menu = document.getElementById("menu-principal");
@@ -62,12 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
         alternarMenu(!menu.classList.contains("aberto"));
     });
 
-    // fecha ao clicar em um link
     menu.querySelectorAll("a").forEach(function (link) {
         link.addEventListener("click", function () { alternarMenu(false); });
     });
 
-    // fecha com ESC ou ao clicar fora
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") alternarMenu(false);
     });
@@ -76,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!menu.contains(e.target) && !botao.contains(e.target)) alternarMenu(false);
     });
 
-    // voltou para tela grande: reseta
     window.addEventListener("resize", function () {
         if (window.innerWidth > 768) alternarMenu(false);
     });
