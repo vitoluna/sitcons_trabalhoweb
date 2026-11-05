@@ -1,12 +1,10 @@
 :root {
-    /* Paleta de cores simplificada */
     --cor-escura: #2D3142;
     --cor-rosa:  #EF8354;
     --cor-rosa-clara: #F6BD60;
     --cor-fundo-claro:  #f6bd609f;
     --cor-roxa: #4F5D75;
     
-    /* Fontes */
     --fonte-titulo: 'Nova Mono', monospace;
     --fonte-texto: 'Nunito', sans-serif;
 }
@@ -456,23 +454,16 @@ body {
     min-width: 200px;
 }
 
-/* =========================================================
-   RESPONSIVIDADE (celular / tablet)
-   ========================================================= */
-
 img { max-width: 100%; }
 
-/* ancora não fica escondida atrás do cabeçalho fixo */
 [id] { scroll-margin-top: 70px; }
 
-/* vídeo do trailer sempre proporcional (ignora height="500" do HTML) */
 .area-video iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
 }
 
-/* botão sanduíche: escondido no desktop */
 .botao-menu {
     display: none;
     flex-direction: column;
@@ -496,7 +487,6 @@ img { max-width: 100%; }
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* vira "X" quando aberto */
 .botao-menu[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .botao-menu[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .botao-menu[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
@@ -507,10 +497,8 @@ img { max-width: 100%; }
     outline-offset: 2px;
 }
 
-/* ---------- Tablet e celular ---------- */
 @media (max-width: 768px) {
 
-    /* Cabeçalho + menu suspenso */
     .cabecalho { padding: 10px 0; }
 
     .container-cabecalho {
@@ -566,7 +554,6 @@ img { max-width: 100%; }
         background-color: rgba(255, 255, 255, 0.08);
     }
 
-    /* Banners */
     .banner,
     .banner-friends,
     .banner-bk99,
@@ -580,7 +567,6 @@ img { max-width: 100%; }
     .slogan { font-size: 20px; }
     .conteudo-banner .nome-projeto { font-size: 24px; }
 
-    /* Seções */
     .sobre-nos,
     .secao-rosa,
     .secao-contato { padding: 40px 16px; }
@@ -593,7 +579,6 @@ img { max-width: 100%; }
         margin-bottom: 20px;
     }
 
-    /* Botões "Onde assistir" (Netflix, Prime, ...) */
     .botoes-download {
         gap: 14px;
         margin-top: 24px;
@@ -611,7 +596,6 @@ img { max-width: 100%; }
         max-width: 120px;
     }
 
-    /* Tabelas */
     .tabela-comparativa-wrapper { margin-top: 24px; }
 
     .tabela-comparativa th,
@@ -622,11 +606,9 @@ img { max-width: 100%; }
 
     .recurso { font-size: 16px; }
 
-    /* Cards */
     .grid-cards { gap: 20px; margin-top: 24px; }
     .card-imagem-container { height: 180px; }
 
-    /* Botões de trailer / navegação entre séries */
     .area-botoes {
         flex-direction: column;
         align-items: stretch;
@@ -645,11 +627,9 @@ img { max-width: 100%; }
         margin: 24px auto;
     }
 
-    /* "hover" não existe no toque: evita o efeito ficar "preso" */
     .card:hover .card-imagem { filter: none; }
 }
 
-/* ---------- Celulares pequenos ---------- */
 @media (max-width: 600px) {
     .grid-cards { grid-template-columns: 1fr; }
 }
